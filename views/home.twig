@@ -1,0 +1,19 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>Hi visitor!</h1>
+    <p>Check our recipes!</p>
+    <table>
+        <th>Name</th>
+        <th>Ingredients</th>
+        <th>Instructions</th>
+
+        {% for recipe in recipes %}
+        <tr>
+            <td>{{ recipe.name }}</td>
+            <td>{{ recipe.ingredients }}</td>
+            <td>{{ recipe.instructions }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
